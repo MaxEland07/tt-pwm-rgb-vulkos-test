@@ -35,6 +35,7 @@ module tt_um_maxeland07_pwm_rgb (
     // again, so one PWM period is three clock ticks.
     reg [1:0] counter;
     always @(posedge clk) begin
+        
         if (!rst_n)               counter <= 2'd0;
         else if (counter == 2'd2) counter <= 2'd0;
         else                      counter <= counter + 2'd1;
